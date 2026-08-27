@@ -1,0 +1,14 @@
+# Intel Image Classification - Python dependencies
+# GPU (RTX 5060) is detected by WSL but not usable by TensorFlow 2.19, so training runs on CPU.
+tensorflow==2.19.0
+
+# tensorflowjs 4.22.0 depends on tensorflow-decision-forests, whose protobuf gencode requires protobuf >= 6.31.1 while TensorFlow 2.19 pins protobuf 5.x.
+# I keep protobuf 5.x and patch the runtime version check in the notebook.
+tensorflowjs==4.22.0
+protobuf==5.29.6
+
+kagglehub==1.0.2
+matplotlib
+scikit-learn
+jupyter
+ipykernel
